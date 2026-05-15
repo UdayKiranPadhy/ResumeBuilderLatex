@@ -1,0 +1,29 @@
+% Shared formatting commands. Fully linear text: inline separators (em-dash and
+% pipe) instead of \hfill or tabular* right-align. ATS extractors (pdftotext,
+% pypdf) see explicit characters between title and date and preserve order +
+% spacing exactly as written.
+
+% Company-level entry: bold name -- location, then italic note on next line,
+% then date range italic on the line after.
+% Usage: \companyEntry{Company}{Location}{DateRange}{Note}
+\newcommand{\companyEntry}[4]{%
+  \vspace{2pt}\noindent\textbf{#1} \textemdash{} #2 \textemdash{} #3\par%
+  \textit{\small #4}\par\vspace{1pt}%
+}
+
+% Role line: bold title, em-dash separator, italic date range, inline.
+% Usage: \roleLine{Title}{DateRange}
+\newcommand{\roleLine}[2]{%
+  \vspace{3pt}\noindent\textbf{#1} \textemdash{} \textit{#2}\par\vspace{-4pt}%
+}
+
+% Project heading: title (usually a hyperlink), em-dash, tech stack in italics.
+% Usage: \projectHeading{TitleLaTeX}{Tech Stack}
+\newcommand{\projectHeading}[2]{%
+  \vspace{4pt}\noindent#1 \textemdash{} \textit{\small #2}\par\vspace{-4pt}%
+}
+
+% Bullet wrappers
+\newcommand{\resumeItem}[1]{\item\small{#1}\vspace{-2pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.18in, itemsep=1pt, parsep=0pt, topsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-4pt}}

@@ -1,0 +1,45 @@
+% Shared preamble for resume-backend.tex and resume-aiml.tex.
+% ATS-safe: Open Sans body font, T1 encoding, microtype with all ligatures
+% disabled, and glyph-to-unicode mapping so PDF text extraction returns clean
+% strings (no fi/ffi/fl ligature artifacts).
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default,scale=0.92]{opensans}
+\usepackage{fontawesome5}
+\usepackage{microtype}
+\DisableLigatures{encoding = *, family = *}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{xcolor}
+
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.75in}
+\addtolength{\textheight}{1.5in}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{4.08003pt}
+\setlength{\parindent}{0pt}
+
+\titleformat{\section}{%
+    \vspace{-6pt}\raggedright\large%
+}{}{0em}{}[\color{black}\titlerule\vspace{-4pt}]

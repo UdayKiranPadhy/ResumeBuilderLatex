@@ -1,0 +1,33 @@
+name: Build Resume PDFs
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        variant: [backend, aiml]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX (${{ matrix.variant }})
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume-${{ matrix.variant }}.tex
+          latexmk_use_xelatex: false
+          args: -pdf -interaction=nonstopmode -halt-on-error -file-line-error
+
+      - name: Upload ${{ matrix.variant }} PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: resume-${{ matrix.variant }}-pdf
+          path: resume-${{ matrix.variant }}.pdf
+          retention-days: 90
+          if-no-files-found: error
