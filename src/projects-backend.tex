@@ -1,12 +1,7 @@
 %-----------PROJECTS-----------%
 \section{Projects}
 
-\projectHeading{\href{https://udaykp.dev/\#detail-proj-aws-rl-env}{\textbf{AWS RL Environment}}}{Python, FastAPI, OpenEnv, MiniStack, HuggingFace}
+\projectHeading{\href{https://udaykp.dev/\#detail-proj-aws-rl-env}{\textbf{AWS RL Environment}}}{Python, GRPO, SFT, Unsloth, FastAPI, OpenEnv, HuggingFace}
 \resumeItemListStart
-\resumeItem{Built a reproducible RL training environment around a vendored MiniStack simulator (34 AWS services, no cloud cost): 120+ YAML-defined tasks across 5 difficulty tiers, an 8-way parallel rollout pool on a single GPU, and an 8-layer anti-reward-hacking defense stack covering verification, dedup, command allow-listing, monotonic progress, and exact resource matching.}
-\resumeItemListEnd
-
-\projectHeading{\href{https://udaykp.dev/\#detail-proj-leetcode-companion}{\textbf{LeetCode Companion}}}{React, TypeScript, FastAPI, Server-Sent Events, crawl4ai, Docker}
-\resumeItemListStart
-\resumeItem{Full-stack tutoring service at \href{https://leetcode.udaykp.dev}{leetcode.udaykp.dev}: FastAPI backend with crawl4ai-based problem extraction, React + TypeScript frontend over Server-Sent Events for chunk-by-chunk streaming, packaged for one-command Docker Compose deploy.}
+\resumeItem{Built a production-grade RL training pipeline for cloud agents -- 120+ YAML-defined AWS tasks across 5 difficulty tiers, 8-way parallel rollouts on a single consumer GPU, full SFT $\rightarrow$ GRPO pipeline backed by a vendored MiniStack simulator (34 AWS services, zero cloud cost); lifted Qwen2.5-Coder-3B from 39\% to 89\% exact-match accuracy after SFT (+6 pp from GRPO), and published HuggingFace adapters, dataset, and a live Space.}
 \resumeItemListEnd

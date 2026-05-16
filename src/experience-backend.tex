@@ -5,21 +5,24 @@
 
 \roleLine{Senior Software Engineer}{Aug 2025 -- Present}
 \resumeItemListStart
-\resumeItem{Drove enterprise readiness (SLA, scale, security review) to unblock Fortune 500 deployments at Intuit and Adobe.}
-\resumeItem{Promoted previously-internal APIs to public endpoints; designed authentication, authorization, scoped permissions, and per-tenant rate limiting before launch.}
-\resumeItem{Remediated critical Python CVEs flagged by Snyk: triaged severity, upgraded transitive dependencies, validated no regressions before release.}
+\resumeItem{Shipped 5+ enterprise grade features that landed Fortune 500 accounts including Intuit and Adobe, sustained 99.95\% measured uptime across high stakes deployments.}
+\resumeItem{Promoted internal APIs to public facing endpoints under proper authorization, enabling customers to integrate the platform into their own systems.}
+\resumeItem{Built admin dashboards over 5M+ data points with multi criteria filtering, writes propagate through an event driven pipeline keeping reads consistent within a fraction of a second.}
+\resumeItem{Implemented 3 production agents (Moderation, Search, Translation) with stateful multi-step reasoning, tool use, and conditional graph routing -- 95\% decision accuracy on previously manual workflows; CloudWatch observability sustained 99.9\% uptime.}
 \resumeItemListEnd
 
 \roleLine{Software Engineer}{Aug 2023 -- Aug 2025}
 \resumeItemListStart
-\resumeItem{Scaled backend APIs to seven-figure peak requests per second at sub-50ms P99 latency via horizontal scaling and a distributed caching layer in front of hot endpoints.}
-\resumeItem{Engineered Single Sign-On across the multi-product platform, replacing per-product login flows with a centralized identity layer.}
-\resumeItem{Operated observability (metrics, logs, distributed tracing) for microservices and AI workloads at 99.9\% uptime; built a user segmentation pipeline across millions of users for targeted campaigns.}
+\resumeItem{Designed high-throughput APIs serving 2M+ requests/day at $\sim$500 RPS peak with P99 latency under 200ms; drove cost per request down 30\% via caching, architecture iteration, and query plan tuning.}
+\resumeItem{Rolled out SSO across the multi-product platform with 5 identity providers (SAML 2, OAuth2, OIDC, Token, Google); replaced per-product credentials with a unified sign-in surface.}
+\resumeItem{Extracted 2 team-owned services from the monolith into independently deployable FastAPI microservices with dedicated scaling and CI; cut deployment time from $\sim$30 min to $\sim$10 min and enabled per-service hotfixes.}
+\resumeItem{Built the platform's i18n framework supporting 20+ locales with message catalogs, plural rules, and RTL support; unblocked customer launches across EMEA and APAC.}
 \resumeItemListEnd
 
 \roleLine{Associate Software Engineer}{Aug 2022 -- Aug 2023}
 \resumeItemListStart
-\resumeItem{Automated infrastructure provisioning across microservices with Terraform (IaC), cutting deployment time by roughly 30\% and removing manual error-prone steps.}
-\resumeItem{Built unit, integration, and end-to-end test suites and Docker-based Python dev environments, reducing onboarding and debug cycles.}
-\resumeItem{Led platform internationalization (i18n), unblocking localization for non-English markets.}
+\resumeItem{Built a rule based user segmentation engine with multi attribute predicates (registration recency, role, post counts), powers targeted audiences across the platform.}
+\resumeItem{Automated CloudFormation IaC for 2 microservices ($\sim$83 AWS resources spanning Lambda, RDS, IAM) with PR driven deploys.}
+\resumeItem{Wrote 200+ unit, integration, and E2E tests for critical services; increased coverage from $\sim$40\% to $\sim$75\%, catching regressions pre-merge.}
+\resumeItem{Standardized Python local development with Docker Compose across the team's services and gave the team reproducible dev parity with production.}
 \resumeItemListEnd
