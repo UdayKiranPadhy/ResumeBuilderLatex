@@ -1,6 +1,11 @@
 %-----------PROJECTS-----------%
 \section{Projects}
 
+\projectHeading{\href{https://aakar.udaykp.dev}{\textbf{Aakar \textemdash{} LLM Architecture Visualizer}}}{FastAPI, Python, React, TypeScript, Redis, Docker, GCP Cloud Run}
+\resumeItemListStart
+\resumeItem{Full-stack LLM-architecture visualizer live at \href{https://aakar.udaykp.dev}{aakar.udaykp.dev}: FastAPI backend introspects any HuggingFace model without downloading weights; React + React Flow frontend renders the module tree as an interactive, zoomable diagram; layered clean architecture with Strategy/Registry extension points, disk + Redis two-tier cache, multi-stage Docker images deployed on Cloud Run.}
+\resumeItemListEnd
+
 \projectHeading{\href{https://udaykp.dev/\#detail-proj-aws-rl-env}{\textbf{AWS RL Environment}}}{Python, GRPO, SFT, Unsloth, FastAPI, OpenEnv, HuggingFace}
 \resumeItemListStart
 \resumeItem{Built a production-grade RL training pipeline for cloud agents -- 120+ YAML-defined AWS tasks across 5 difficulty tiers, 8-way parallel rollouts on a single consumer GPU, full SFT $\rightarrow$ GRPO pipeline backed by a vendored MiniStack simulator (34 AWS services, zero cloud cost); lifted Qwen2.5-Coder-3B from 39\% to 89\% exact-match accuracy after SFT (+6 pp from GRPO), and published HuggingFace adapters, dataset, and a live Space.}
